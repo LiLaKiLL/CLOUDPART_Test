@@ -1,0 +1,66 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Products</h1>
+    <!-- Search form -->
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Filter" id="txtFilter">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="filterbtn">Send</button>
+        </div>
+    </div>
+    <table class="table table-hover" id="myTable">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="5">Empty table!</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="addproduct">
+    Add new product
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row g-2">
+                    <div class="form-floating mb-3 col-6">
+                        <input type="text" class="form-control" id="txtid" placeholder="">
+                        <label for="txtid">Id</label>
+                    </div>
+                    <div class="form-floating col-6">
+                        <input type="text" class="form-control" id="txtname" placeholder="">
+                        <label for="txtname">Product name</label>
+                    </div>
+                    <div class="form-floating col-12">
+                        <textarea class="form-control" placeholder="" id="txtdescription"></textarea>
+                        <label for="txtdescription">Description</label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary confirm-btn" data="create">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
